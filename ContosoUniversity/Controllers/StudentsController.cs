@@ -128,7 +128,7 @@ namespace ContosoUniversity.Controllers
             return View(studentToUpdate);
         }
 
-        // GET: Students/Delete/5
+        // GET: Students/Delete/5 -- Go get the student
         public async Task<IActionResult> Delete(int? id, bool? saveChangesError = false)
         {
             if (id == null)
@@ -154,7 +154,7 @@ namespace ContosoUniversity.Controllers
             return View(student);
         }
 
-        // POST: Students/Delete/5   
+        // POST: Students/Delete/5  -- Actual deletion of the student.
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
